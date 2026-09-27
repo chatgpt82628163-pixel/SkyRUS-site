@@ -3,7 +3,7 @@
 @{ ViewData["Title"] = "Личный кабинет"; var u = Me.User!; }
 <div class="wrap page">
   <div class="profile">
-    <span class="avatar">@Format.Initials(u.Name)</span>
+    <partial name="_Avatar" model="(u.Cid, u.Name)" />
     <div>
       <h1 style="margin:0">@u.Name</h1>
       <div class="muted">CID <span class="mono">@u.Cid</span> · рейтинг <span class="rating">@u.Rating</span>
