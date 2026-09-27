@@ -3,7 +3,7 @@
 @{ var s = Model.Student; ViewData["Title"] = s.Name; }
 <p><a href="/tc/students">← Студенты</a></p>
 <div class="profile">
-  <span class="avatar">@Format.Initials(s.Name.Length > 0 ? s.Name : "?")</span>
+  <partial name="_Avatar" model="(s.Cid, s.Name)" />
   <div style="flex:1">
     <h1 style="margin:0">@s.Name <span class="muted mono" style="font-size:18px">@s.Cid</span></h1>
     <div class="muted">Текущий рейтинг <span class="rating">@s.Rating</span>

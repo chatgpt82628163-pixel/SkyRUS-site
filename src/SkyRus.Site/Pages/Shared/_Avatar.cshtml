@@ -1,0 +1,6 @@
+@model (long Cid, string Name)
+@inject Microsoft.Extensions.Options.IOptions<SiteOptions> Options
+@* Initials, covered by the member's SkyNetwork profile picture when there is one (it is removed if the network has none). *@
+@{ var network = Options.Value.NetworkUrl.TrimEnd('/'); }
+<span class="avatar">@Format.Initials(Model.Name.Length > 0 ? Model.Name : "?")@if (network.Length > 0 && Model.Cid > 0)
+  {<img src="@network/api/v1/members/@Model.Cid/avatar" alt="" loading="lazy" onerror="this.remove()">}</span>
