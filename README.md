@@ -93,7 +93,7 @@ dotnet run
 
 ```
 src/SkyRus.Site/
-├── Data/           — работа с SQLite (Dapper), миграции
+├── Data/           — работа с SQLite (Dapper), миграции; TrainingService, SiteContent
 ├── Network/        — клиент API сети SkyNetwork
 ├── Pages/          — Razor Pages
 │   ├── Admin/      — административный раздел (персонал дивизиона)
@@ -102,7 +102,7 @@ src/SkyRus.Site/
 │   ├── Regions/    — справочник РПИ
 │   └── Tc/         — учебный центр
 ├── Security/       — авторизация, CurrentUser
-├── Services/       — TrainingService, SiteContent, RatingRequestSync и др.
+├── Services/       — MemberRefresh, RatingRequestSync
 ├── Program.cs      — точка входа, конфигурация DI и middleware
 └── SiteOptions.cs  — параметры секции "Site"
 tests/
